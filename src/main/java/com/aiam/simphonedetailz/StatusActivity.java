@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 @SuppressWarnings("deprecation")
 public class StatusActivity extends TabActivity {
 
@@ -15,7 +18,11 @@ public class StatusActivity extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+
+        AdView adView = (AdView) this.findViewById(R.id.adView);
+        AdRequest ar = new AdRequest();
+        adView.loadAd(ar);
+
         TabHost host = getTabHost();
         
         TabSpec statusspec = host.newTabSpec("Phone");

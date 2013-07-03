@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@android:id/tabhost">
-    <LinearLayout 
-    android:orientation="vertical"    
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@android:style/Theme.Light.NoTitleBar">
-
-        <FrameLayout
-            android:id="@android:id/tabcontent"
+         xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@android:id/tabhost">
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
-            <TabWidget
+        <com.google.ads.AdView android:id="@+id/adView"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               ads:adUnitId="a151d35dd267a46"
+                               ads:adSize="BANNER"
+                               ads:loadAdOnCreate="true"
+                               android:layout_gravity="center_horizontal|bottom"/>
+        <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|bottom"
-                android:showDividers="beginning|middle|end">
-            </TabWidget>
+                >
+        </TabWidget>
+        <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
         </FrameLayout>
-
     </LinearLayout>
 </TabHost>

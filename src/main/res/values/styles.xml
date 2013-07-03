@@ -18,7 +18,6 @@
     <style name="labelStyleLeft">
                 <item name="android:layout_width">wrap_content</item>
                 <item name="android:layout_height">wrap_content</item>
-                <item name="android:layout_weight">0.5</item>
                 <item name="android:textSize">15dip</item>
                 <item name="android:textStyle">bold</item>
                 <item name="android:layout_margin">10dip</item>
